@@ -21,7 +21,7 @@ with open(output_name, "wb") as fh:
 
 orig_direc = os.getcwd()
 for i in files:
-    os.chdir('blogs/'+i)
-    call(['htlatex', "post.tex"])
+    direct = 'blogs/'+i
+    call(['htlatex', direct+"/post.tex"])
     os.chdir(orig_direc)
     shutil.copytree('blogs/'+i,'public/'+i)
