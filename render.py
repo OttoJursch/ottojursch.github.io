@@ -15,7 +15,7 @@ dicts = map(lambda x: {'name':x, 'file':x+'/post.html'}, files)
 
 rendered = index_temp.render({'blog_posts':dicts})
 
-output_name = 'public/index.html'
+output_name = 'index.html'
 with open(output_name, "wb") as fh:
     fh.write(rendered.encode('utf8'))
 
