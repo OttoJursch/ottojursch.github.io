@@ -1,5 +1,5 @@
-all: venv
-	pipenv run python render.py
+all:
+	python render.py
 
 venv:
 	pipenv install
