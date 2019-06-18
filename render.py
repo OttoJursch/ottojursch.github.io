@@ -1,5 +1,6 @@
 import shutil
 import os
+import glob
 from jinja2 import Environment, FileSystemLoader
 from subprocess import call
 
@@ -12,7 +13,7 @@ env = Environment(loader=FileSystemLoader('templates'))
 index_temp = env.get_template('index.html')
 blogs_temp = env.get_template('blogs.html')
 
-files = os.listdir('blogs')
+files = glob.glob('blogs/*')
 
 rendered = index_temp.render()
 
