@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Otto is a person</title>
+    </head>
+    <body>
+        {% include 'header.html' %}
+        <h1>This is where I attempt to explain things I think I know</h1>
+        <p>
+            These blog posts will go one of three ways: 
+            <ul>
+                <li>I will explain some topic I tried learning as an exercise to test my own understanding</li>
+                <li>I will introduce ome project I worked on</li>
+                <li>I won't write anything because I'm lazy</li>
+        </p>
+        <ul>
+            {% for blog in blogs %}
+            <li><a href="blogs/{{blog}}/post.html"> {{blog}} </a> </li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
